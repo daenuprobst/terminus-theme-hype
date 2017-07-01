@@ -1,24 +1,25 @@
-$window-border: #313131;
-$body-bg: #010101;
-$body-bg2: #010101;
-$body-bg3: #111;
+$window-border: #242424;
+$tab-bar-bg: #242424;
+$body-bg: #383838;
+$body-bg2: #383838;
+$body-bg3: #222;
 
 
-$tab-border-radius: 3px;
+$tab-border-radius: 0px;
 $button-hover-bg: rgba(255, 255, 255, .05);
 $button-active-bg: rgba(255, 255, 255, .1);
 
 
 $white:  #fff !default;
 $black:  #000 !default;
-$red:    #d9534f !default;
-$orange: #f0ad4e !default;
-$yellow: #ffd500 !default;
-$green:  #5cb85c !default;
-$blue:   #0275d8 !default;
-$teal:   #5bc0de !default;
-$pink:   #ff5b77 !default;
-$purple: #613d7c !default;
+$red:    #e81123 !default;
+$orange: #f7630c !default;
+$yellow: #ffb900 !default;
+$green:  #10893e !default;
+$blue:   #0063b1 !default;
+$teal:   #0099bc !default;
+$pink:   #ea005e !default;
+$purple: #9a0089 !default;
 
 
 $body-color: #aaa;
@@ -33,7 +34,7 @@ $btn-secondary-border:           #444;
 
 
 $nav-tabs-border-color:                       $body-bg2;
-$nav-tabs-border-width:                       1px;
+$nav-tabs-border-width:                       0px;
 $nav-tabs-border-radius:                      0;
 $nav-tabs-link-hover-border-color:            $body-bg2;
 $nav-tabs-active-link-hover-color:            $white;
@@ -96,6 +97,9 @@ app-root  {
 
     &> .content {
         .tab-bar {
+
+            background-color: $tab-bar-bg;
+
             .btn-tab-bar {
                 background: transparent;
                 &:hover { background: $button-hover-bg !important; }
@@ -104,14 +108,18 @@ app-root  {
 
             &>.tabs {
                 tab-header {
-                    background: $body-bg;
+                    background: $tab-bar-bg;
+
+                    &.active {
+                        background: $body-bg2
+                    }
 
                     .index {
                         color: #555;
                     }
 
                     .name {
-                        text-align: center;
+                        text-align: left;
                     }
 
                     button {
@@ -177,7 +185,7 @@ settings-tab > ngb-tabset {
     border-right: 1px solid $body-bg2;
 
     & > .nav {
-        background: $body-bg3;
+        background: $black;
 
         & > .nav-item > .nav-link {
             border-left: none;
@@ -255,4 +263,47 @@ hotkey-input-modal {
 
 .form-group label {
     margin-bottom: 2px;
+}
+
+.btn-minimize {
+    color: #fff;
+
+    &:hover {
+        background-color: #2e2e2e;
+    }
+
+    path {
+        stroke: #fff;
+    }
+}
+
+.btn-maximize {
+    color: #fff;
+        fill: #fff;
+
+    &:hover {
+        background-color: #2e2e2e;
+    }
+
+    path {
+        stroke: #fff;
+        fill: #fff;
+    }
+}
+
+.btn-close {
+    color: #fff;
+
+    &:hover {
+        background-color: #e81123;
+    }
+
+    path {
+        stroke: #fff;
+        fill: #fff;
+    }
+}
+
+.list-group-item {
+    background-color: $body-bg3;
 }

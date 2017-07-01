@@ -1,7 +1,7 @@
 {
-  "name": "terminus-theme-hype",
+  "name": "terminus-theme-windows10",
   "version": "0.0.6",
-  "description": "Hyper inspired theme for Terminus",
+  "description": "Windows 10 inspired theme for Terminus",
   "keywords": ["terminus-plugin"],
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "files": [
     "dist"
   ],
-  "author": "Eugene Pankov",
+  "author": "Daniel Probst",
   "license": "MIT",
   "peerDependencies": {
     "@angular/core": "4.0.1",
@@ -36,5 +36,5 @@
     "typescript": "~2.1.0",
     "webpack": "2.3.3"
   },
-  "repository": "eugeny/terminus-theme-hype"
+  "repository": "daenuprobst/terminus-theme-hype"
 }
